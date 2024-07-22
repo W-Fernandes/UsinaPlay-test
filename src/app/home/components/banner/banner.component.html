@@ -1,0 +1,39 @@
+<div *ngIf="slides.length > 0" class="div-container">
+  <swiper-container [modules]="swiperModules" [slidesPerView]="2.0" [initialSlide]="1" [centeredSlides]="true"
+    [spaceBetween]="10">
+    <swiper-slide *ngFor="let slide of slides; let i = index">
+      <div class="slide-card" [ngClass]="{'with-opacity': withOpacity, 'conteudo-card': tipo === 'conteudo'}">
+        <div class="slide-content">
+          <img [src]="slide?.banner" />
+          <div class="overlay" *ngIf="withOpacity"></div>
+          <div class="card-content">
+            <ng-container *ngIf="tipo === 'personal';">
+              <ion-icon *ngIf="i === 0" name="add-circle-outline"></ion-icon>
+              <p *ngIf="i === 0">NOVO<br>TREINO</p>
+              <div *ngIf="i !== 0">
+                <div class="fixed-content">
+                  <div>{{slide?.label}}</div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="tipo === 'programa'">
+              <div class="fixed-content">
+                <div *ngIf="i === 0">
+                  <ion-text class="ion-text-lowercase">CONTINUAR
+                    TREINANDO</ion-text>
+                </div>
+                <div [ngClass]="{'card-start': i === 0}">
+                  <div>{{slide?.label}}</div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="tipo === 'conteudo'">
+              <div *ngIf="i === 0" class="square-form">
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>

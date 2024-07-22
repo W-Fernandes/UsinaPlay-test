@@ -1,0 +1,45 @@
+<div class="containeer-header">
+  <ion-toolbar class="remove_inner_bottom">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img src="assets/img/logo/logo.png">
+    </ion-title>
+    <ion-buttons slot="end">
+      <div class="notification">
+        <ion-icon name="notifications" class="badge-notification"></ion-icon>
+      </div>
+      <ion-badge class="custom-ion-badge" [color]="notifications.length ? 'success' : 'transparent'"></ion-badge>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="profile-header">
+    <div class="custom-profile">
+      <ion-avatar>
+        <img src="{{user_data.avatar}}" alt="{{user_data.name_user}}" />
+      </ion-avatar>
+      <div class="profile-info">
+        <div>{{user_data.name_user}}</div>
+        <p class="nivel">{{ user_data.nivel }}</p>
+      </div>
+    </div>
+    <ion-item lines="none" color="none">
+      <div class="segment-buttons">
+        <ion-segment>
+          <ion-segment-button>
+            <div class="segment-content">
+              <ion-icon name="body-sharp"></ion-icon>
+              <ion-label>MEU CORPO</ion-label>
+            </div>
+          </ion-segment-button>
+          <ion-segment-button>
+            <div class="segment-content">
+              <ion-icon name="trophy-sharp"></ion-icon>
+              <ion-label>OBJETIVOS E CONQUISTAS</ion-label>
+            </div>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+    </ion-item>
+  </div>
+</div>

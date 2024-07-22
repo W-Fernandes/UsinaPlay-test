@@ -35,3 +35,89 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .fixed-content {
+    top         : 7vh !important;
+    margin-right: 12vh !important;
+    font-size   : 18px !important;
+  }
+
+
+  .section-title {
+    margin-left: 60px !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 800px) {
+  .fixed-content {
+    font-size   : 20px !important;
+    margin-right: 18vh !important;
+    top         : 8vh !important;
+  }
+
+  .section-title {
+    margin-left: 75px !important;
+  }
+
+  .card-content ion-icon {
+    font-size             : 50px !important;
+  }
+
+  .card-content p {
+    font-size  : 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .fixed-content {
+    font-size   : 22px !important;
+    margin-right: 20vh !important;
+    top         : 10vh !important;
+  }
+
+  .section-title {
+    margin-left: 80px !important;
+  }
+
+
+  .card-content ion-icon {
+    font-size             : 55px !important;
+  }
+
+  .card-content p {
+    font-size  : 24px;
+  }
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .fixed-content {
+    font-size   : 24px !important;
+    margin-right: 25vh !important;
+    top         : 15vh !important;
+  }
+
+  ion-text {
+    font-size: large !important;
+    color    : #ffb000 !important;
+  }
+
+  .section-title {
+    margin-left: 85px !important;
+  }
+}
+
+@media only screen and (min-width: 1800px) { 
+  .section-title {
+    margin-left: 115px !important;
+  }
+  
+}

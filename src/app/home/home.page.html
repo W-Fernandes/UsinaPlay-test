@@ -1,0 +1,17 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+  <div class="section-title">
+    <div class="custom-section">PERSONAL ONLINE</div>
+    <ion-icon class="icon-add" name="add-circle-outline"></ion-icon>
+  </div>
+  <app-banner [slides]="slides" [withOpacity]="true" [tipo]="personal"></app-banner>
+  <div class="section-title">
+    <div class="custom-section">PROGRAMAS</div>
+    <ion-badge color="primary" class="new-badge">NOVO</ion-badge>
+  </div>
+  <app-banner [slides]="slides" [withOpacity]="false" [tipo]="programa"></app-banner>
+  <div class="section-title disabled-text">
+    <div class="custom-section">CONTEÚDOS</div>
+  </div>
+  <app-banner [slides]="slides" [withOpacity]="true" [tipo]="conteudo"></app-banner>
+</ion-content>
