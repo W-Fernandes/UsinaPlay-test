@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { BannerComponent } from './components/banner/banner.component'; 
+import { BannerComponent } from './components/banner/banner.component';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../services/data.service';
-import { UserData, Slide, Notification } from '../models';
+import { Slide } from '../models';
 import { HeaderComponent } from './components/header/header.component';
 
 
@@ -16,18 +16,16 @@ import { HeaderComponent } from './components/header/header.component';
 })
 export class HomePage implements OnInit {
   slides: Slide[] = [];
-  notifications: Notification[] = [];
-  user_data: UserData = { name_user: '', avatar: '', nivel: '' };
 
   personal: string = 'personal';
   programa: string = 'programa';
-  conteudo:string = 'conteudo';
+  conteudo: string = 'conteudo';
 
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-   
+
     // GET SLIDES
     this.dataService.getSlides().subscribe(data => {
       this.slides = data;
