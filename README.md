@@ -5,9 +5,6 @@
 
 UsinaPlay Test (app teste).
 
-## Live Preview
-
-Veja o aplicativo em ação: [UsinaPlay Test Live Preview](https://usina-play-test.web.app/home)
 
 ## Tecnologias Utilizadas
 
